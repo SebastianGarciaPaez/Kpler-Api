@@ -1,0 +1,80 @@
+{
+  "info": {
+    "_postman_id": "200d9e4c-df45-4871-a4fa-bdf63086593b",
+    "name": "Kpler AIS API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51923644",
+    "_collection_link": "https://go.postman.co/collection/51923644-200d9e4c-df45-4871-a4fa-bdf63086593b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "ais-latest",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "http://localhost:3001/sync/ais-latest?limit=8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "sync",
+            "ais-latest"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "8",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"sebastian.garciapaez@amspecgroup.com\",\r\n  \"password\": \"Sebas123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
